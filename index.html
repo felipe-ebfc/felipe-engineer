@@ -4,6 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Felipe Engineer-Manriquez</title>
+  <meta name="description" content="Author, EBFC Show Host, Registered Scrum Trainer™, and Construction Changemaker. Bringing Lean + Scrum + AI to the construction industry." />
+  
+  <!-- Open Graph (LinkedIn, Facebook) -->
+  <meta property="og:title" content="Felipe Engineer-Manriquez" />
+  <meta property="og:description" content="Author, EBFC Show Host, Registered Scrum Trainer™, and Construction Changemaker." />
+  <meta property="og:image" content="https://felipe.engineer/headshot.jpeg" />
+  <meta property="og:url" content="https://felipe.engineer" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@felipe_engineer" />
+  <meta name="twitter:title" content="Felipe Engineer-Manriquez" />
+  <meta name="twitter:description" content="Author, EBFC Show Host, Registered Scrum Trainer™, and Construction Changemaker." />
+  <meta name="twitter:image" content="https://felipe.engineer/headshot.jpeg" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗️</text></svg>" />
 
   <!-- Google Fonts: Cormorant Garamond (display) + Jost (UI) -->
@@ -91,15 +106,8 @@
     .avatar {
       width: 100%; height: 100%;
       border-radius: 50%;
-      background: #1E1A14;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-display);
-      font-size: 1.65rem;
-      font-weight: 600;
-      color: var(--copper);
-      letter-spacing: 0.05em;
+      object-fit: cover;
+      display: block;
     }
 
     /* ─── IDENTITY ───────────────────────────────────────────────── */
@@ -270,7 +278,6 @@
       .stage { padding: 2.5rem 1.5rem; }
 
       .avatar-ring { width: 96px; height: 96px; }
-      .avatar { font-size: 1.85rem; }
 
       .name { font-size: clamp(1.95rem, 4vw, 2.35rem); }
 
@@ -280,7 +287,6 @@
     /* ─── MOBILE COMPACT ─────────────────────────────────────────── */
     @media (max-height: 680px) {
       .avatar-ring { width: 72px; height: 72px; }
-      .avatar { font-size: 1.4rem; }
       .avatar-wrap { margin-bottom: 1rem; }
       .divider { margin: 1rem 0 0.9rem; }
       .socials { margin-bottom: 1.1rem; }
@@ -298,7 +304,7 @@
       <!-- AVATAR -->
       <div class="avatar-wrap">
         <div class="avatar-ring">
-          <div class="avatar">FE</div>
+          <img class="avatar" src="headshot.jpeg" alt="Felipe Engineer-Manriquez" />
         </div>
       </div>
 
