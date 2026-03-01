@@ -346,6 +346,43 @@
         </cite>
       </blockquote>
 
+      <!-- PROOF STRIP -->
+      <div class="proof-strip" style="width:100%; text-align:center; margin:1.2rem 0 0.4rem; opacity:0; animation:rise 0.7s var(--easing) 0.38s forwards;">
+        <div class="proof-quotes" style="position:relative; height:3.6rem; overflow:hidden;">
+          <div id="proofTrack" style="transition:opacity 0.6s ease;">
+            <p id="proofText" style="font-family:var(--font-display); font-style:italic; font-size:0.95rem; color:var(--sand); line-height:1.5; margin:0; padding:0 1rem; opacity:0.85;">"Awesome experience. Very interactive trainer that kept the whole team engaged for the duration of the course."</p>
+          </div>
+        </div>
+        <p style="font-family:var(--font-ui); font-size:0.62rem; font-weight:500; color:var(--sand-dim); letter-spacing:0.08em; margin-top:0.45rem; opacity:0.6;">What students say · RSM Training · 179 responses · 4.8 avg rating</p>
+        <a href="/testimonials" style="font-family:var(--font-ui); font-size:0.7rem; font-weight:500; color:var(--copper); text-decoration:none; letter-spacing:0.04em; display:inline-block; margin-top:0.35rem; transition:color 0.2s;">See all testimonials →</a>
+      </div>
+
+      <script>
+      (function(){
+        var quotes = [
+          "\u201cThanks a lot, Felipe! I learned so much from you! I will try scrum in my projects and with my kids for organizing our family life ;-)\u201d",
+          "\u201cAwesome experience. Very interactive trainer that kept the whole team engaged for the duration of the course.\u201d",
+          "\u201cFelipe has great radio voice and keeps content interesting and easy to follow.\u201d",
+          "\u201cFelipe was very engaging, even though I was sick, I was still able to pay attention which says a lot.\u201d",
+          "\u201cFelipe is a fantastic coach & instructor. Very fun and engaging course with great #IRL applications.\u201d",
+          "\u201cGreat energy and excellent facilitation skills when applying best practices to real-world examples!\u201d",
+          "\u201cFelipe did a great job introducing Scrum and how to be a successful Scrum Master. High visibility and great examples.\u201d",
+          "\u201cOutstanding! Felipe has a unique talent for making complex concepts accessible and engaging.\u201d"
+        ];
+        var i = 0;
+        var el = document.getElementById('proofText');
+        var track = document.getElementById('proofTrack');
+        setInterval(function(){
+          track.style.opacity = '0';
+          setTimeout(function(){
+            i = (i + 1) % quotes.length;
+            el.textContent = quotes[i];
+            track.style.opacity = '1';
+          }, 500);
+        }, 5000);
+      })();
+      </script>
+
       <!-- DIVIDER -->
       <div class="divider">
         <div class="divider-line"></div>

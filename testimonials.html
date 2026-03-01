@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felipe Engineer-Manriquez — RSM Training Testimonials</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Jost', sans-serif;
+    background: #0C0B09;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: linear-gradient(180deg, #004AAD 0%, #0a0a0a 100%);
+  }
+  
+  .hero h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 24px;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .stat {
+    text-align: center;
+  }
+  
+  .stat .number {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #FFD700;
+    line-height: 1;
+  }
+  
+  .stat .label {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    margin-top: 4px;
+  }
+  
+  .scroll-container {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+  }
+  
+  .scroll-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll-left 120s linear infinite;
+    width: max-content;
+  }
+  
+  .scroll-track:hover {
+    animation-play-state: paused;
+  }
+  
+  .scroll-container:nth-child(odd) .scroll-track {
+    animation-direction: reverse;
+  }
+  
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  .card {
+    flex-shrink: 0;
+    width: 380px;
+    background: #141210;
+    border: 1px solid rgba(193,127,62,0.18);
+    border-radius: 16px;
+    padding: 24px;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    border-color: rgba(193,127,62,0.55);
+  }
+  
+  .stars {
+    color: #FFD700;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  
+  .card .text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 16px;
+  }
+  
+  .card .meta {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 60px 20px;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.85rem;
+  }
+  
+  .footer a {
+    color: #C17F3E;
+    text-decoration: none;
+  }
+  
+  .back-link {
+    display: inline-block;
+    margin: 20px 0 0;
+    color: #C17F3E;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: opacity 0.2s;
+  }
+  .back-link:hover { opacity: 0.7; }
+  .cta {
+    display: inline-block;
+    background: #004AAD;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background 0.2s;
+  }
+  
+  .cta:hover {
+    background: #0058cc;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <a href="/" class="back-link">← felipe.engineer</a>
+  <h1>What Students Say</h1>
+  <p class="subtitle">Real feedback from Registered Scrum Master™ training — 33 sessions, 2021–2025</p>
+  <div class="stats">
+    <div class="stat">
+      <div class="number">179</div>
+      <div class="label">Responses</div>
+    </div>
+    <div class="stat">
+      <div class="number">4.8</div>
+      <div class="label">Avg Rating</div>
+    </div>
+    <div class="stat">
+      <div class="number">87%</div>
+      <div class="label">5-Star</div>
+    </div>
+    <div class="stat">
+      <div class="number">33</div>
+      <div class="label">Sessions</div>
+    </div>
+  </div>
+  <a href="https://ebfc.ai" class="cta">Learn More →</a>
+</div>
+
+<div id="testimonials"></div>
+
+<div class="footer">
+  <p>Felipe Engineer-Manriquez · Registered Scrum Trainer™</p>
+  <p style="margin-top:8px"><a href="https://felipe.engineer">felipe.engineer</a> · <a href="https://ebfc.ai">ebfc.ai</a></p>
+</div>
+
+<script>
+const testimonials = [{"text": "Felipe's enthusiasm for Scrum is off the Mural Board! Because of his comfortable manner in teaching this course, I now have immediate new ideas and ways to manage tasks in my business. Go Scrum! Go Felipe!", "rating": 5, "session": "", "date": ""}, {"text": "This was a great course with lots of opportunities to ask questions. Felipe shared a lot of his knowledge and experiences which made this training very insightful. I liked his style of presentation and interactive style a lot. He was able to keep everyone in the course engaged.", "rating": 5, "session": "", "date": ""}, {"text": "Felipe led Us but did not over explain anything allowing the Team to think outside the box on their own, Overall great training!\nextremely patient with my inexperience with ZOOM.", "rating": 5, "session": "", "date": ""}, {"text": "Felipe is a great instructor and delivers the course's topics with a lot knowledge and confidence. Also, the course's activities where dynamic and allowed us to understand better the theorical concepts.\n\nI consider some scrum therminology could be explained a bit more so newcomers to agile frameworks can follow the course without losing themselves on the last topics.\n\nI 100% recommend Felipe for new Scrum Master Trainees.", "rating": 5, "session": "", "date": ""}, {"text": "Felipe is amazing as an instructor and as a person. The course is smooth and entertaining, \nI think to improve this course, it must be related to just construction, as most people who will do this course are construction professionals and when jumping between the IT and construction, it is confusing, so just focus on everything construction without referring to anything IT", "rating": 5, "session": "", "date": ""}, {"text": "I found it to be a very dynamic way of teaching the methodology, especially on the first day, with very practical and engaging examples, even funny ones, which made it easy to assimilate and also easier to remember. I would have liked to see more of these dynamic and funny examples on the second day. But overall, it was very good.", "rating": 5, "session": "", "date": ""}, {"text": "Excellent profesor and class. i was able to apply everything I learnt in the class on my day to day work. He was very clear and was able to explain us with real life examples.", "rating": 5, "session": "", "date": ""}, {"text": "Loved the class and love Felipes presentation style. Material was spot on. Really looking forward to being more productive and a better leader with the use of Scrum.", "rating": 5, "session": "", "date": ""}, {"text": "Felipe gave one of the best trainings I have ever had. Fun, Engaging and his techniques did well to ensure material retention. Not only was this a master class in the use of scrum but a master class in facilitation.", "rating": 5, "session": "", "date": ""}, {"text": "My trainer kept the class lively with jokes and made the class simultaneously enjoyable and insightful. I had the most fun learning in a long time due to Felipe's teaching style. He answered all of my questions and encouraged me to stop him at any point if I didn't understand something. Thank you, Felipe, for an amazing experience.", "rating": 5, "session": "", "date": ""}, {"text": "Given that the course was focused on scrum i construction, I think it would be an improvement if the examples was more related to construction - even though a lot is transferable. \nMaybe the sprints in the course also could be related to a construction scenarios (or similar) in stead of scrum it self - especially in the first course day. On the second day it was easier to follow the steps (with the tickets beeing detailed and moved on the \"window board\").", "rating": 4, "session": "", "date": ""}, {"text": "elipe explained the concepts clearly and connected them to real-life examples, which made the learning more engaging.\nHe created a positive and interactive environment that encouraged participation and questions.", "rating": 5, "session": "", "date": ""}, {"text": "Brought energy and humor to the experience.  Tremendous expertise in all aspects of scrum.  I wonder if these two days could be broken out into separate courses or even a series of courses to take in succession at different times?", "rating": 5, "session": "", "date": ""}, {"text": "For the 1st time in years, Felipe made training not feel like training! The course was brilliantly designed for our team to learn Scrum through real world examples and engaging in team exercises.", "rating": 5, "session": "", "date": ""}, {"text": "El orden de la ense\u00f1anza, utilizo el metodo scrum durante todo el curso, y me dio claridad de como utilizarlo en todas las \u00e1reas de mi vida. Para que la aplicaci\u00f3n a los \"pendientes\" del trabajo sean los m\u00e1s sencillos. Muchas gracias", "rating": 5, "session": "", "date": ""}, {"text": "Explained Scrum in an easy way for anyone to understand and learn. He used real world examples including the method in which we were trained to use scrum making it relatable to each of us.", "rating": 4, "session": "", "date": ""}, {"text": "Felipe shares a great way of story-telling and this is always helpful when it comes to new theories being taught. Keeping up the positive vibes and humor is essential. Concerning stuff that can make the course better, I do believe that Sprints 3 and 4 (next day) are way to important than the first 2 sprints (first day) hence expended explanations and deeper examples from live context will be helpful and interesting to dive in. Heads up Felipe I was so happy to meet you and cheers for what the future might hold for us to support and serve our community. \nLove from Frankfurt, Joseph.", "rating": 5, "session": "", "date": ""}, {"text": "Explained everything well and professionally. Well informed and very sharp!\nOnly thing I would say that could improve is more exercises or exercise that mimics each process and overall process of scrum in our day to day activities.\nThank you for everything you taught us!!.. Very valuable info.. SCRUM works!!!", "rating": 5, "session": "", "date": ""}, {"text": "he did magnificient at walking us thru different scenarios and how to deal with cumbersome attitudes\n\nHe could do better by providing the AI resources he uses to improve his communication", "rating": 5, "session": "", "date": ""}, {"text": "Outstanding!\nI must say it was an exceptional experience. Felipe has a unique talent for making complex concepts accessible and engaging. The course was well-structured, with a perfect balance of theory and practical application. The interactive sessions and real-world examples provided invaluable insights into Scrum practices. \nFelipe's enthusiasm and dedication to teaching were evident throughout the course, creating a positive and motivating learning environment. I highly recommend this course to anyone looking to deepen their understanding of Scrum.", "rating": 5, "session": "", "date": ""}, {"text": "I would've preferred the course to be delivered in the instructor\u2019s native language, as I believe the explanations would have been clearer, especially during the activities, which would have helped all participants better understand.", "rating": 5, "session": "", "date": ""}, {"text": "Felipe really brought the energy and enthusiasm! There is a lot of content packed into his course and he kept us moving through it efficiently.  Brief but timely breaks were much appreciated to allow the new content to soak in after experimenting with tools and processes.  He left no question unanswered and stayed late to share his inspiring  story. I'm blown away by his masterful knowledge.  Truly effective delivery from an engaging instructor.", "rating": 5, "session": "", "date": ""}, {"text": "Great SCRUM Trainer!!! Kept me engaged the whole time! Provided great examples and has deep passion for this subject. I would give him 10 stars if that was possible!", "rating": 5, "session": "", "date": ""}, {"text": "Felipe is a great partner to Dee. Consummate professional, completely gets the online medium. Would like to have seen him bring more case histories to the sessions. More lesson points on how he/McCarthy C-suite managed to \"crack open\" the construction business to adopt Scrum would be useful.", "rating": 5, "session": "", "date": ""}, {"text": "The entire training was very smooth, never felt bored or disengaged. Felipe answered all questions, constantly engaging all participants. I have a much better understanding of Scrum than when I started.", "rating": 5, "session": "", "date": ""}, {"text": "Loved Felipe's energy, organization, and even using Scrum as the agenda to guide us through the class.  Was great stuff!  I wish we had more time to work through the exercises as teams in our breakout sessions. Excited to start using Scrum on my project.", "rating": 5, "session": "", "date": ""}, {"text": "Felipe opened up an entirely new universe for me: better ways of thinking about my hectic stressed-out work life, organizing my time, and involving the team of talented people I have the privilege of working with every day in deciding how we're going to work together.\n\nThe course was a great experience; I've already taken a few halting steps to bring Scrum to the guys I work with, and it's been well received.\n\nThat's the only area I feel 'weak' in right now: how to get Scrum and Lean going in the strict top-down, command-and-control, do it my way or pack your stuff and get off the site environment I'm in.  That obviously isn't working on my current job: we're fourteen months behind schedule and two million dollars over budget already. \n\nI'm looking forward to writing the \"after\" to this \"before\" when I've used Scrum to improve the flow of my work!", "rating": 5, "session": "", "date": ""}, {"text": "Felipe approaches training with enthusiasm and an incredible amount of energy. He engages his entire audience and has an immense amount real-world application to share along with high-end resources.", "rating": 5, "session": "", "date": ""}, {"text": "Felipe is really engaging & you can tell he loves what he does. I think he's really great. The only reason I would give him a 4 instead of a 5 was that I felt like a lot of the joking around was overboard. Still enjoyed the class and highly recommend...", "rating": 4, "session": "", "date": ""}, {"text": "what was it with the adult learner stuff..that was very wierd! is it an american thing?\n\nother than that great course, sorry i had to bail out but my migraine was just too much for me", "rating": 5, "session": "", "date": ""}, {"text": "Felipe is an inspirational and energetic Coach and Trainer- if you had any doubts about this system? This guy will blow them away\u2026 every heartbeat is scrum. the training has a perfect mixture between theory, videos, action and self-learning sequences- it never gets boring or theoretical. Thank you Felipe, for these two days- i will keep on track! Choo Choo\u2026. Martin", "rating": 5, "session": "", "date": ""}, {"text": "Well: The communication with the group where direct and easy. He made it be easy to ask questions freely and it was nice with time for disussing open with the other groups.\n\nImprove: I litle more examples in the beginning would be nice.", "rating": 4, "session": "", "date": ""}, {"text": "Felipe was energetic, and believes in what he does so much that it was a breeze learning the content, and built my confidence quickly that this is the right path for our organization to move us forward.", "rating": 5, "session": "", "date": ""}, {"text": "Anteriormente ya hab\u00eda tomado un curso general de SCRUM y no me hab\u00eda quedado del todo claro, la explicaci\u00f3n de Felipe fue muy buena y sobre todo pr\u00e1ctica que me permiti\u00f3 aclarar mis dudas y empezar de inmediato la implementaci\u00f3n del uso de SCRUM", "rating": 5, "session": "", "date": ""}, {"text": "More construction-related \"real-life\" examples. \nPractical team-work in the course should have been a work-related case. the task was difficult to understand and for me, learning was limited.", "rating": 4, "session": "", "date": ""}, {"text": "The instructors did an excellent job of delivering the content. Their passion and expertise in the subject matter were evident, and they conveyed the information in a clear and concise manner. They were also responsive to questions and provided helpful explanations whenever needed. This created a supportive learning environment and made me feel comfortable engaging with the course material.", "rating": 5, "session": "", "date": ""}, {"text": "Felipe has an extreme grasp on the content. Rarely do you meet someone as passionate. The course itself was very informative and simple to understand. The celebration confetti is a bit corny, but he makes it work.", "rating": 5, "session": "", "date": ""}, {"text": "Positive: Great commitment and a lot of positive energy that makes it easier to maintain concentration. \nImprovement: I missed concrete examples of how to use the aquired knowledge on a real project.", "rating": 4, "session": "", "date": ""}, {"text": "Felipe is great at keeping everyone engaged.  When someone gets distracted, he immediately brings them back to the subject topic, which ensures constant productive learning.  I got distracted with my own thoughts...", "rating": 5, "session": "", "date": ""}, {"text": "I really appreciated the teaching style and different activities. I would recommend doing an activity that scales down SCRUM and have participants do apply it on a personal level.", "rating": 5, "session": "", "date": ""}, {"text": "Great effort on the way the training was provided. Clear concepts, great dynamism, a lot of examples that helps on a better understanding of the items. It\u00b4s understandable that all of the items, concepts and agenda to be covered in reference to SCRUM is so well explained when you have someone that have passion about what he\u00b4s teaching and this is the case with Felipe. Gracias por todo!!", "rating": 5, "session": "", "date": ""}, {"text": "Felipe is fantastic at making the long trainings entertaining enough for me to be able to continuously pay attention which is something I normally struggle with especially with virtual trainings", "rating": 5, "session": "", "date": ""}, {"text": "The additional resources and the one on one assistance was very helpful in understanding the methods upon which SCRUM is based and how its applied to my specific role.", "rating": 5, "session": "", "date": ""}, {"text": "Hi Felipe :)\nAn dieser Stelle nochmal vielen Dank f\u00fcr diese hervorragende Einf\u00fchrung in das Scrum-Universum! Auch wenn manchen aufgrund der Sprachbarriere nicht einfach und sofort zu verstehen war, hat sich das Gesamtbild mit etwas zeitlichem Abstand und Selbststudium zusammengef\u00fcgt. \nInsgesamt fand ich, dass es eine unterhaltsame und interaktive Schulung war, bei der das Lernen Spa\u00df gemacht hat! Good job!\nAllerdings habe ich noch einen Punkt anzumerken... Die Folien waren teilweise mit etwas zu viel Text/Inhalt vollgeladen, sodass ein gleichzeitiges Zuh\u00f6ren, Lesen und Verstehen (vor allem in einer Fremdsprache) meine Multitasking-F\u00e4higkeiten etwas \u00fcberschritten hat :D\nAlles in allem eine ausgezeichnete Schulung, die ich jedem weiterempfehlen w\u00fcrde!!\n\nCheers, Tobi", "rating": 5, "session": "", "date": ""}, {"text": "Felipe did a great job explaining the fundamentals and framework of Scrum. The videos provided were informative and entertaining to keep the viewer's attention. I would definitely recommend this training to others wanting to get into Scrum!", "rating": 5, "session": "", "date": ""}, {"text": "Felipe was a great instructor. He's obviously elite as a scrum master of masters. He was great at captivating our attention and his class activities really helped serve to explain why scrum is such a useful tool.", "rating": 5, "session": "", "date": ""}, {"text": "Felipe makes learning fun and challenging. I don't remember checking the time once after the classes started and several times I was so focused on the subject matter that I was startled when we hit break time. Overall this is one of the best learning experiences I've had since I started my lean journey...Just wish I had gotten started earlier...The course built on the previous sessions and Felipe 's use of the burndown metric gave us a sense of progress. I would recommend this course to those who want to improve the work experience for their team mates", "rating": 5, "session": "", "date": ""}, {"text": "Felipe's course was top-notch. He did an incredible job teaching SCRUM as a whole as well as spend as much time as the class needed to answer questions in a meaningful way. Thanks again Felipe, you did a great job!", "rating": 5, "session": "", "date": ""}, {"text": "Felipe did a great job in introducing the knowledge of Scrum and How to be a successful Scrum Master. Felipe provided the information with high visibility and great examples and practice.", "rating": 5, "session": "", "date": ""}, {"text": "I enjoyed the course and found it useful. I would have liked that there was a relevant example we reviewed in the meeting (scrum task related to \"typical project\" for the construction industry here)", "rating": 4, "session": "", "date": ""}, {"text": "It is quite an ambitious endeavor to teach so much in just two days, but Felipe succeeded.  The amount of information and how it relates to our work is a bit overwhelming.  It would be nice to have perhaps one additional day with a bit more reflection to assimilate what we have learned.  Perhaps two separate classes (i.e. Introduction to Scrum and Scrum Master Class Advanced).  Having an introduction to Scrum could be a way to introduce newbies into the world of Scrum.  Thanks again for your patience, wisdom, grace and humor!", "rating": 5, "session": "", "date": ""}, {"text": "Felipe was great and very patience with providing in depth answers to the many questions that I had.\n\nI look forward to more interactions and hopefully more lessons from him!", "rating": 5, "session": "", "date": ""}, {"text": "Felipe is an incredible coach. He has great expertise and understands how to convey his knowledge. I admire his way of presenting content and at the same time performing acrobatic services on the PC.\nI have had several days of training at Scrum and hold a degree as a  Scrum Matster Professional. What I learned with Felipe in the two days exceeds what I have learned so far. At the same time, I only now feel able to apply Scrum in my work.\nI can only recommend this course.\nGreat", "rating": 5, "session": "", "date": ""}, {"text": "Felipe did a great job as a master scrum by introducing us and sharing us (Hermosillo team) all about and the essence and methodology of scrum. The two days went so fast because of the great way of orientation and dinamic learning. I understand now about scrum principles  that i am motivated to implement it more and more to my way of planning in my professional and personal life.", "rating": 5, "session": "", "date": ""}, {"text": "Mr. Felipe Engineer has created a great course with original content. The Registered Construction Scrum Master Course helps construction professionals with their implementation of scrum. It provides analogies and introduction to Scrum Framework. Review session at the end of the course allow for more in depth questions and help build the agile mindset. \n\nThank you,\n\nEugene Orlik", "rating": 5, "session": "", "date": ""}, {"text": "Always up tempo and never a doubt as to his commitment to the framework and benefits of Scrum. Very thought provoking, and while most engineers like some concrete examples he has perfected the art of teaching the framework and clearly stating that it shall be organic and not some rigid process......but will give some basic examples after outlining those ground rules", "rating": 5, "session": "", "date": ""}, {"text": "Great presenter! The class was very interactive and animated! His passion for scrum and genuine investment in our successes was conveyed through his method of teaching. I enjoyed participating.", "rating": 5, "session": "", "date": ""}, {"text": "Was a great course overall. Felipe had so much energy and passion for the topic and this was directly transmitted to the participants. I'm still hyped for the topic 2 weeks later and I'm eager to dig deeper into the topic. I enjoyed the focus of the seminar regarding the construction industry, because its easier then to transfer the \"philosophy\" components of scrum directly to the application in construction and design. Sometimes during the seminar it was hard for me to follow the structure of the course (\"is this topic right now relevant for the Scrum master or for sprint planning or...\") but i went through the slides afterwards and i figured it out. 2 days of intense scrum training is just a lot to digest. Thanks again Felipe for the course. I would be happy to see more Scrum in construction stuff in the future.", "rating": 5, "session": "", "date": ""}, {"text": "Felipe tiene una gran capacidad para transmitir su conocimiento, aun con eso, la cantidad de informaci\u00f3n es enorme para ser comprendida en 2 d\u00edas, yo creo qu\u00e9 deber\u00eda enviarse una serie de videos previos a las personas qu\u00e9 tomar\u00e1n el curso, iniciar con el concurso sobre los errores en un scrum board, y a partir de ah\u00ed agarrar dudas, de esa forma, todo lo qu\u00e9 se vea en el curso ser\u00e1 resolver dudas, m\u00e1s qu\u00e9 aprender nuevos conceptos, pues ya estar\u00e1s enterado y familiarizado con el m\u00e9todo.", "rating": 5, "session": "", "date": ""}, {"text": "Felipe brought great explicit examples of how scrum can be used to improve design and construction projects.  Would like a deeper dive into the correlation between scrum and the Last Planner System (R).", "rating": 5, "session": "", "date": ""}];
+
+function makeStars(n) {
+  return '★'.repeat(n) + '☆'.repeat(5-n);
+}
+
+function truncate(text, max) {
+  if (text.length <= max) return text;
+  return text.substring(0, max).trim() + '…';
+}
+
+// Split into 3 rows of 20
+const rows = [testimonials.slice(0,20), testimonials.slice(20,40), testimonials.slice(40,60)];
+const container = document.getElementById('testimonials');
+
+rows.forEach((row, i) => {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'scroll-container';
+  
+  // Duplicate for seamless loop
+  const allCards = [...row, ...row];
+  
+  const track = document.createElement('div');
+  track.className = 'scroll-track';
+  track.style.animationDuration = (100 + i * 20) + 's';
+  
+  allCards.forEach(t => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="stars">${makeStars(t.rating)}</div>
+      <div class="text">${truncate(t.text, 280)}</div>
+      <div class="meta">RSM Training · ${t.date}</div>
+    `;
+    track.appendChild(card);
+  });
+  
+  wrapper.appendChild(track);
+  container.appendChild(wrapper);
+});
+</script>
+
+</body>
+</html>
