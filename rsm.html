@@ -290,7 +290,7 @@
 
     .hero-cta {
       opacity: 0;
-      animation: heroFadeUp 0.8s ease forwards 0.8s;
+      animation: heroFadeUp 0.8s ease forwards 0.9s;
     }
 
     .hero-cta .btn-primary {
@@ -299,16 +299,54 @@
     }
 
     .hero-meta {
-      margin-top: 24px;
+      margin-top: 16px;
       color: var(--ebfc-gray);
       font-size: 15px;
       opacity: 0;
-      animation: heroFadeUp 0.8s ease forwards 1.0s;
+      animation: heroFadeUp 0.8s ease forwards 1.1s;
     }
 
-    .hero-meta span {
+    /* ---- PRICING BLOCK ---- */
+    .hero-pricing {
+      margin-bottom: 32px;
+      opacity: 0;
+      animation: heroFadeUp 0.8s ease forwards 0.7s;
+    }
+
+    .price-anchor {
+      font-size: clamp(20px, 3.5vw, 28px);
+      font-weight: 700;
+      color: var(--ebfc-white);
+      margin-bottom: 6px;
+    }
+
+    .price-anchor s {
+      color: var(--ebfc-gray);
+      font-weight: 400;
+      text-decoration: line-through;
+    }
+
+    .price-arrow {
+      color: var(--ebfc-gray);
+      margin: 0 4px;
+    }
+
+    .price-now {
       color: var(--ebfc-gold);
-      font-weight: 600;
+      font-size: clamp(24px, 4vw, 34px);
+    }
+
+    .price-qualifier {
+      color: var(--ebfc-gray-light);
+      font-size: 16px;
+      font-weight: 400;
+      margin-left: 4px;
+    }
+
+    .price-context {
+      color: var(--ebfc-gray-light);
+      font-size: 16px;
+      font-style: italic;
     }
 
     @keyframes heroFadeUp {
@@ -782,11 +820,15 @@
     <div class="hero-content">
       <p class="hero-eyebrow">Live Virtual Training</p>
       <h1 id="hero-heading">Become a <span class="gold-text">Registered Scrum Master™</span></h1>
-      <p class="hero-subtitle">Two days of live virtual training with Felipe Engineer-Manriquez. Earn the RSM credential signed by Dr. Jeff Sutherland — the co-creator of Scrum.</p>
+      <p class="hero-subtitle">Two days of live virtual training with Felipe Engineer-Manriquez. Earn the RSM credential signed by Dr. Jeff Sutherland, the co-creator of Scrum.</p>
+      <div class="hero-pricing">
+        <p class="price-anchor"><s>$2,000</s> <span class="price-arrow">→</span> <span class="price-now">$949</span> <span class="price-qualifier">for this network</span></p>
+        <p class="price-context">One lunch a day for a month.</p>
+      </div>
       <div class="hero-cta">
         <a href="#register" class="btn-primary">Join the Waitlist</a>
       </div>
-      <p class="hero-meta">⚡ <span>$949 per person</span> · Limited class size</p>
+      <p class="hero-meta">Limited class size · No payment today</p>
     </div>
   </section>
 
@@ -803,7 +845,7 @@
         <div class="detail-card fade-up">
           <span class="detail-icon" aria-hidden="true">📋</span>
           <h3>Format</h3>
-          <p>2 days, 4 live sessions via Zoom. Morning and afternoon blocks with a break between.</p>
+          <p>2 days, 4 live sessions via Zoom. Morning and afternoon blocks with a break between each.</p>
         </div>
         <div class="detail-card fade-up">
           <span class="detail-icon" aria-hidden="true">⏰</span>
@@ -813,7 +855,7 @@
         <div class="detail-card fade-up">
           <span class="detail-icon" aria-hidden="true">🎓</span>
           <h3>Credential</h3>
-          <p>Registered Scrum Master™ (RSM) credential signed by Dr. Jeff Sutherland upon successful completion.</p>
+          <p>RSM credential signed by Dr. Jeff Sutherland. The co-creator of Scrum signs your certificate.</p>
         </div>
       </div>
     </div>
@@ -831,19 +873,19 @@
       <div class="curriculum-grid">
         <div class="curriculum-card fade-up">
           <h3>Scrum Framework</h3>
-          <p>The roles, events, and artifacts — taught through the lens of construction project delivery, not software.</p>
+          <p>Roles, events, and artifacts taught through construction project delivery. No software analogies.</p>
         </div>
         <div class="curriculum-card fade-up">
           <h3>Last Planner System + Scrum</h3>
-          <p>How Scrum and LPS work together. Pull planning, constraint management, and weekly work planning.</p>
+          <p>Scrum and LPS working together. Pull planning, constraint management, weekly work planning.</p>
         </div>
         <div class="curriculum-card fade-up">
           <h3>Production Control</h3>
-          <p>PPC tracking, variance analysis, and reliable promising. Make commitments you can keep.</p>
+          <p>PPC tracking, variance analysis, reliable promising. Make commitments you keep.</p>
         </div>
         <div class="curriculum-card fade-up">
           <h3>Team Facilitation</h3>
-          <p>How to run effective daily huddles, retrospectives, and pull planning sessions that people actually want to attend.</p>
+          <p>Daily huddles, retrospectives, and pull planning sessions people show up for. Not because they have to.</p>
         </div>
       </div>
     </div>
@@ -858,7 +900,7 @@
         <p class="section-label">Your Instructor</p>
         <h2 class="section-title" id="instructor-heading" style="margin-bottom: 40px;">Learn from the Field</h2>
         <div class="quote-block">
-          <p class="quote-text">I've trained hundreds of construction professionals in Scrum. This isn't theory from a textbook — it's practice from the trailer. Every example, every exercise, every conversation is grounded in the reality of building things.</p>
+          <p class="quote-text">I've trained hundreds of construction professionals in Scrum. Not from a textbook. From the trailer. The examples, exercises, and conversations come from 30 years of building things.</p>
           <p class="quote-author">— Felipe Engineer-Manriquez, RST</p>
           <p class="quote-bio">30 years in construction. Lean Construction Institute Chairman's Award Winner. Host, The EBFC Show.</p>
         </div>
@@ -874,7 +916,7 @@
       <div class="register-inner fade-up">
         <p class="section-label">Join the Waitlist</p>
         <h2 class="section-title" id="register-heading">Secure Your Spot</h2>
-        <p class="register-subtitle">Dates are announced once we have 10+ registrants. No payment required today.</p>
+        <p class="register-subtitle">Next class: May 7-8, 2026. No payment required today.</p>
 
         <div class="form-card" id="formCard">
           <form id="waitlistForm" novalidate>
