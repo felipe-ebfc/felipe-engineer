@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSM Training — Registered Scrum Master™ | Felipe Engineer-Manriquez</title>
+  <meta name="description" content="Two days of live virtual Registered Scrum Master™ training with Felipe Engineer-Manriquez. Earn the RSM credential signed by Dr. Jeff Sutherland.">
+  <meta name="theme-color" content="#0A0A0C">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+  <style>
+    :root {
+      --ebfc-bg: #0A0A0C;
+      --ebfc-bg-elevated: #111114;
+      --ebfc-card: #16161A;
+      --ebfc-card-hover: #1C1C22;
+      --ebfc-blue: #1A6FE0;
+      --ebfc-blue-bright: #3B8AFF;
+      --ebfc-blue-dark: #004AAD;
+      --ebfc-gold: #D4A827;
+      --ebfc-gold-light: #F0C847;
+      --ebfc-white: #F0F0F2;
+      --ebfc-gray: #8B8D97;
+      --ebfc-gray-light: #AAACB6;
+      --ebfc-border: rgba(255, 255, 255, 0.06);
+      --ebfc-border-blue: rgba(26, 111, 224, 0.15);
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: var(--ebfc-bg);
+      color: var(--ebfc-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Grid texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(26, 111, 224, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26, 111, 224, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Hero glow */
+    .hero-glow {
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 600px;
+      background: radial-gradient(ellipse at center, rgba(26, 111, 224, 0.12) 0%, rgba(26, 111, 224, 0.04) 40%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ---- HEADER ---- */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(10, 10, 12, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--ebfc-border);
+      height: 64px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .rsm-badge {
+      background: var(--ebfc-gold);
+      color: var(--ebfc-bg);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      line-height: 1;
+    }
+
+    .header-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--ebfc-white);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-link {
+      color: var(--ebfc-gray-light);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .header-link:hover {
+      color: var(--ebfc-white);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--ebfc-blue);
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      font-family: inherit;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(26, 111, 224, 0.3);
+      background: var(--ebfc-blue-bright);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-primary:focus-visible {
+      outline: 2px solid var(--ebfc-blue-bright);
+      outline-offset: 2px;
+    }
+
+    /* ---- SECTIONS ---- */
+    section {
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--ebfc-gold);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: var(--ebfc-white);
+    }
+
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--ebfc-border-blue), rgba(212, 168, 39, 0.12), var(--ebfc-border-blue), transparent);
+      margin: 0;
+      border: none;
+    }
+
+    /* ---- HERO ---- */
+    .hero {
+      padding: 140px 24px 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--ebfc-gold);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: heroFadeUp 0.8s ease forwards 0.2s;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--ebfc-gold);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 7vw, 64px);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: heroFadeUp 0.8s ease forwards 0.4s;
+    }
+
+    .gold-text {
+      background: linear-gradient(135deg, var(--ebfc-gold), var(--ebfc-gold-light), var(--ebfc-gold));
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .hero-subtitle {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: var(--ebfc-gray-light);
+      max-width: 640px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+      opacity: 0;
+      animation: heroFadeUp 0.8s ease forwards 0.6s;
+    }
+
+    .hero-cta {
+      opacity: 0;
+      animation: heroFadeUp 0.8s ease forwards 0.8s;
+    }
+
+    .hero-cta .btn-primary {
+      font-size: 17px;
+      padding: 14px 32px;
+    }
+
+    .hero-meta {
+      margin-top: 24px;
+      color: var(--ebfc-gray);
+      font-size: 15px;
+      opacity: 0;
+      animation: heroFadeUp 0.8s ease forwards 1.0s;
+    }
+
+    .hero-meta span {
+      color: var(--ebfc-gold);
+      font-weight: 600;
+    }
+
+    @keyframes heroFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ---- FADE-UP (scroll) ---- */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---- COURSE DETAILS ---- */
+    .details {
+      padding: 100px 0;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .detail-card {
+      background: var(--ebfc-card);
+      border: 1px solid var(--ebfc-border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      transition: transform 0.3s, border-color 0.3s, background 0.3s;
+    }
+
+    .detail-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 168, 39, 0.2);
+      background: var(--ebfc-card-hover);
+    }
+
+    .detail-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .detail-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--ebfc-white);
+    }
+
+    .detail-card p {
+      color: var(--ebfc-gray-light);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* ---- CURRICULUM ---- */
+    .curriculum {
+      padding: 100px 0;
+    }
+
+    .curriculum-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .curriculum-card {
+      background: var(--ebfc-card);
+      border: 1px solid var(--ebfc-border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      transition: transform 0.3s, border-color 0.3s, background 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .curriculum-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--ebfc-gold), var(--ebfc-gold-light), var(--ebfc-gold));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .curriculum-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 168, 39, 0.2);
+      background: var(--ebfc-card-hover);
+    }
+
+    .curriculum-card:hover::before {
+      opacity: 1;
+    }
+
+    .curriculum-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--ebfc-white);
+    }
+
+    .curriculum-card p {
+      color: var(--ebfc-gray-light);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* ---- INSTRUCTOR ---- */
+    .instructor {
+      padding: 100px 0;
+    }
+
+    .instructor-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .quote-block {
+      background: var(--ebfc-card);
+      border: 1px solid var(--ebfc-border);
+      border-left: 4px solid var(--ebfc-gold);
+      border-radius: 0 16px 16px 0;
+      padding: 40px 36px;
+      position: relative;
+    }
+
+    .quote-block::before {
+      content: '\201C';
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-size: 72px;
+      color: var(--ebfc-gold);
+      opacity: 0.2;
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+
+    .quote-text {
+      font-size: clamp(16px, 2.2vw, 19px);
+      line-height: 1.7;
+      color: var(--ebfc-gray-light);
+      font-style: italic;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .quote-author {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ebfc-gold);
+    }
+
+    .quote-bio {
+      font-size: 14px;
+      color: var(--ebfc-gray);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    /* ---- REGISTRATION ---- */
+    .register {
+      padding: 100px 0 120px;
+    }
+
+    .register-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .register-subtitle {
+      color: var(--ebfc-gray-light);
+      font-size: 16px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .form-card {
+      background: var(--ebfc-card);
+      border: 1px solid var(--ebfc-border);
+      border-radius: 16px;
+      padding: 36px 32px;
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group:last-of-type {
+      margin-bottom: 28px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ebfc-gray-light);
+      margin-bottom: 8px;
+    }
+
+    .form-label .required {
+      color: var(--ebfc-gold);
+      margin-left: 2px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      background: var(--ebfc-bg-elevated);
+      border: 1px solid var(--ebfc-border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 16px;
+      color: var(--ebfc-white);
+      font-family: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--ebfc-blue);
+      box-shadow: 0 0 0 3px rgba(26, 111, 224, 0.15);
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--ebfc-gray);
+    }
+
+    .form-select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238B8D97' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 40px;
+      cursor: pointer;
+    }
+
+    .form-select option {
+      background: var(--ebfc-bg-elevated);
+      color: var(--ebfc-white);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      font-size: 17px;
+      padding: 14px 28px;
+      justify-content: center;
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    .form-note {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--ebfc-gray);
+    }
+
+    .form-error {
+      background: rgba(220, 38, 38, 0.1);
+      border: 1px solid rgba(220, 38, 38, 0.3);
+      color: #f87171;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-top: 16px;
+      display: none;
+    }
+
+    .form-error.show {
+      display: block;
+    }
+
+    /* Success state */
+    .success-message {
+      text-align: center;
+      padding: 60px 32px;
+      display: none;
+    }
+
+    .success-message.show {
+      display: block;
+    }
+
+    .success-check {
+      width: 72px;
+      height: 72px;
+      background: rgba(212, 168, 39, 0.1);
+      border: 2px solid var(--ebfc-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 32px;
+    }
+
+    .success-message h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--ebfc-gold);
+      margin-bottom: 12px;
+    }
+
+    .success-message p {
+      color: var(--ebfc-gray-light);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ---- FOOTER ---- */
+    .site-footer {
+      border-top: 1px solid var(--ebfc-border);
+      padding: 40px 24px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-copy {
+      color: var(--ebfc-gray);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .footer-contact {
+      font-size: 14px;
+    }
+
+    .footer-contact a {
+      color: var(--ebfc-gold);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-contact a:hover {
+      color: var(--ebfc-gold-light);
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 768px) {
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .curriculum-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 120px 20px 80px;
+      }
+
+      .header-link {
+        display: none;
+      }
+
+      .form-card {
+        padding: 28px 20px;
+      }
+
+      .quote-block {
+        padding: 32px 24px;
+      }
+
+      .quote-block::before {
+        left: 16px;
+        font-size: 56px;
+      }
+
+      .detail-card,
+      .curriculum-card {
+        padding: 24px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .header-inner {
+        padding: 0 16px;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .hero {
+        padding: 110px 16px 60px;
+        min-height: auto;
+      }
+    }
+
+    /* Loading spinner */
+    .spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-left">
+        <span class="rsm-badge" aria-label="RSM Badge">RSM</span>
+        <span class="header-title">RSM Training</span>
+      </div>
+      <nav class="header-right" aria-label="Main navigation">
+        <a href="https://felipe.engineer" class="header-link" target="_blank" rel="noopener">felipe.engineer</a>
+        <a href="#register" class="btn-primary">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Live Virtual Training</p>
+      <h1 id="hero-heading">Become a <span class="gold-text">Registered Scrum Master™</span></h1>
+      <p class="hero-subtitle">Two days of live virtual training with Felipe Engineer-Manriquez. Earn the RSM credential signed by Dr. Jeff Sutherland — the co-creator of Scrum.</p>
+      <div class="hero-cta">
+        <a href="#register" class="btn-primary">Join the Waitlist</a>
+      </div>
+      <p class="hero-meta">⚡ <span>$949 per person</span> · Limited class size</p>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- Course Details -->
+  <section class="details" aria-labelledby="details-heading">
+    <div class="container">
+      <div class="fade-up">
+        <p class="section-label">Course Details</p>
+        <h2 class="section-title" id="details-heading">What You'll Experience</h2>
+      </div>
+      <div class="details-grid">
+        <div class="detail-card fade-up">
+          <span class="detail-icon" aria-hidden="true">📋</span>
+          <h3>Format</h3>
+          <p>2 days, 4 live sessions via Zoom. Morning and afternoon blocks with a break between.</p>
+        </div>
+        <div class="detail-card fade-up">
+          <span class="detail-icon" aria-hidden="true">⏰</span>
+          <h3>Schedule</h3>
+          <p>7:00 AM – 10:00 AM PST, then 12:00 PM – 3:00 PM PST. Both days.</p>
+        </div>
+        <div class="detail-card fade-up">
+          <span class="detail-icon" aria-hidden="true">🎓</span>
+          <h3>Credential</h3>
+          <p>Registered Scrum Master™ (RSM) credential signed by Dr. Jeff Sutherland upon successful completion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- Curriculum -->
+  <section class="curriculum" aria-labelledby="curriculum-heading">
+    <div class="container">
+      <div class="fade-up">
+        <p class="section-label">Curriculum</p>
+        <h2 class="section-title" id="curriculum-heading">Built for Construction Professionals</h2>
+      </div>
+      <div class="curriculum-grid">
+        <div class="curriculum-card fade-up">
+          <h3>Scrum Framework</h3>
+          <p>The roles, events, and artifacts — taught through the lens of construction project delivery, not software.</p>
+        </div>
+        <div class="curriculum-card fade-up">
+          <h3>Last Planner System + Scrum</h3>
+          <p>How Scrum and LPS work together. Pull planning, constraint management, and weekly work planning.</p>
+        </div>
+        <div class="curriculum-card fade-up">
+          <h3>Production Control</h3>
+          <p>PPC tracking, variance analysis, and reliable promising. Make commitments you can keep.</p>
+        </div>
+        <div class="curriculum-card fade-up">
+          <h3>Team Facilitation</h3>
+          <p>How to run effective daily huddles, retrospectives, and pull planning sessions that people actually want to attend.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- Instructor -->
+  <section class="instructor" aria-labelledby="instructor-heading">
+    <div class="container">
+      <div class="instructor-inner fade-up">
+        <p class="section-label">Your Instructor</p>
+        <h2 class="section-title" id="instructor-heading" style="margin-bottom: 40px;">Learn from the Field</h2>
+        <div class="quote-block">
+          <p class="quote-text">I've trained hundreds of construction professionals in Scrum. This isn't theory from a textbook — it's practice from the trailer. Every example, every exercise, every conversation is grounded in the reality of building things.</p>
+          <p class="quote-author">— Felipe Engineer-Manriquez, RST</p>
+          <p class="quote-bio">30 years in construction. Lean Construction Institute Chairman's Award Winner. Host, The EBFC Show.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- Registration -->
+  <section class="register" id="register" aria-labelledby="register-heading">
+    <div class="container">
+      <div class="register-inner fade-up">
+        <p class="section-label">Join the Waitlist</p>
+        <h2 class="section-title" id="register-heading">Secure Your Spot</h2>
+        <p class="register-subtitle">Dates are announced once we have 10+ registrants. No payment required today.</p>
+
+        <div class="form-card" id="formCard">
+          <form id="waitlistForm" novalidate>
+            <div class="form-group">
+              <label for="fullName" class="form-label">Full Name <span class="required" aria-label="required">*</span></label>
+              <input type="text" id="fullName" name="full_name" class="form-input" placeholder="Your full name" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address <span class="required" aria-label="required">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="you@company.com" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="company" class="form-label">Company / Organization</label>
+              <input type="text" id="company" name="company" class="form-input" placeholder="Optional" autocomplete="organization">
+            </div>
+
+            <div class="form-group">
+              <label for="role" class="form-label">Role / Title</label>
+              <input type="text" id="role" name="role_title" class="form-input" placeholder="Optional" autocomplete="organization-title">
+            </div>
+
+            <div class="form-group">
+              <label for="referral" class="form-label">How did you hear about this?</label>
+              <select id="referral" name="referral_source" class="form-select">
+                <option value="">Select one (optional)</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="The EBFC Show">The EBFC Show</option>
+                <option value="Word of Mouth">Word of Mouth</option>
+                <option value="Felipe's Website">Felipe's Website</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="notes" class="form-label">Additional Notes</label>
+              <textarea id="notes" name="notes" class="form-textarea" placeholder="Anything else you'd like us to know? (optional)"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+              Join the Waitlist →
+            </button>
+
+            <div class="form-error" id="formError" role="alert"></div>
+
+            <p class="form-note">🔒 Your information is secure. No spam, ever.</p>
+          </form>
+        </div>
+
+        <div class="success-message" id="successMessage" role="status">
+          <div class="success-check" aria-hidden="true">✓</div>
+          <h3>You're on the list!</h3>
+          <p>We'll email you when dates are announced. Keep an eye on your inbox.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <p class="footer-copy">© 2026 Felipe Engineer-Manriquez · The EBFC Show</p>
+    <p class="footer-contact">Questions? <a href="mailto:felipe@ebfc.ai">felipe@ebfc.ai</a></p>
+  </footer>
+
+  <script>
+    // Scroll fade-up observer
+    (function() {
+      var targets = document.querySelectorAll('.fade-up');
+      if (!targets.length) return;
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      targets.forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+
+    // Form submission
+    (function() {
+      var SUPABASE_URL = 'https://kprvniyewsnqqvuovioh.supabase.co';
+      var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtwcnZuaXlld3NucXF2dW92aW9oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQyMjA2NDgsImV4cCI6MjA4OTc5NjY0OH0.O8f78wiN6ptC3UI6wgHy8hux_BJyrjuB0vqQHAn7ZNk';
+
+      var form = document.getElementById('waitlistForm');
+      var formCard = document.getElementById('formCard');
+      var submitBtn = document.getElementById('submitBtn');
+      var errorEl = document.getElementById('formError');
+      var successEl = document.getElementById('successMessage');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Clear previous errors
+        errorEl.classList.remove('show');
+        errorEl.textContent = '';
+
+        // Get values
+        var name = document.getElementById('fullName').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var company = document.getElementById('company').value.trim();
+        var role = document.getElementById('role').value.trim();
+        var source = document.getElementById('referral').value;
+        var notes = document.getElementById('notes').value.trim();
+
+        // Validate
+        if (!name) {
+          showError('Please enter your full name.');
+          document.getElementById('fullName').focus();
+          return;
+        }
+
+        if (!email || !isValidEmail(email)) {
+          showError('Please enter a valid email address.');
+          document.getElementById('email').focus();
+          return;
+        }
+
+        // Disable button, show loading
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner"></span>Submitting...';
+
+        fetch(SUPABASE_URL + '/rest/v1/rsm_waitlist', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
+            'Prefer': 'return=minimal'
+          },
+          body: JSON.stringify({
+            full_name: name,
+            email: email,
+            company: company || null,
+            role_title: role || null,
+            referral_source: source || null,
+            notes: notes || null
+          })
+        })
+        .then(function(response) {
+          if (!response.ok) {
+            if (response.status === 409) {
+              throw new Error('This email is already on the waitlist.');
+            }
+            throw new Error('Something went wrong. Please try again or email felipe@ebfc.ai directly.');
+          }
+          // Success
+          formCard.style.display = 'none';
+          successEl.classList.add('show');
+        })
+        .catch(function(err) {
+          showError(err.message);
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Join the Waitlist →';
+        });
+      });
+
+      function showError(msg) {
+        errorEl.textContent = msg;
+        errorEl.classList.add('show');
+      }
+
+      function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+    })();
+  </script>
+
+</body>
+</html>
