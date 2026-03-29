@@ -965,9 +965,6 @@
 
     // Form submission
     (function() {
-      var SUPABASE_URL = 'https://kprvniyewsnqqvuovioh.supabase.co';
-      var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtwcnZuaXlld3NucXF2dW92aW9oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQyMjA2NDgsImV4cCI6MjA4OTc5NjY0OH0.O8f78wiN6ptC3UI6wgHy8hux_BJyrjuB0vqQHAn7ZNk';
-
       var form = document.getElementById('waitlistForm');
       var formCard = document.getElementById('formCard');
       var submitBtn = document.getElementById('submitBtn');
@@ -1006,13 +1003,10 @@
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<span class="spinner"></span>Submitting...';
 
-        fetch(SUPABASE_URL + '/rest/v1/rsm_waitlist', {
+        fetch('/api/waitlist', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-            'apikey': SUPABASE_ANON_KEY,
-            'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
-            'Prefer': 'return=minimal'
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             full_name: name,
