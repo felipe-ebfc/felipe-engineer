@@ -10,10 +10,8 @@
       ]
     }
   ],
-  "redirects": [
-    { "source": "/food", "destination": "/food/", "permanent": false }
-  ],
   "rewrites": [
+    { "source": "/food", "destination": "https://felipe-food-log.vercel.app/food" },
     { "source": "/food/:path*", "destination": "https://felipe-food-log.vercel.app/food/:path*" }
   ]
 }
