@@ -12,6 +12,7 @@
   ],
   "rewrites": [
     { "source": "/food", "destination": "https://felipe-food-log.vercel.app/food" },
-    { "source": "/food/:path*", "destination": "https://felipe-food-log.vercel.app/food/:path*" }
+    { "source": "/food/", "destination": "https://felipe-food-log.vercel.app/food/" },
+    { "source": "/food/:path+", "destination": "https://felipe-food-log.vercel.app/food/:path*" }
   ]
 }
